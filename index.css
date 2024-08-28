@@ -1,0 +1,232 @@
+:root{
+    --primary-color-100: hsl(34, 71%, 86%);
+    --primary-color-300: hsl(34, 88%, 68%);
+    --primary-color-400: hsl(33.83,94%,60.78%);
+    --primary-color-600:hsl(34, 96%, 58%);
+    --primary-color-800:hsl(34, 100%, 57%);
+    --primary-color-900: hsl(34, 91%, 51%);
+
+    --primary-text-color-400: hsl(0,0%,6.67%);
+    --primary-text-color-200: hsl(0, 0%, 16%);
+
+    --secondary-text-color-100: hsl(211, 61%, 27%);
+    --secondary-text-color-200:hsl(211, 63%, 21%);
+    --secondary-text-color-400: hsl(211.43,63.64%,12.94%);
+    --secondary-text-color-600:hsl(211, 63%, 10%);
+    --secondary-text-color-800:hsl(210, 65%, 7%);
+
+    --heading-font-family: "Pirata One", system-ui;
+    --heading-font-size: 3.2rem;
+    
+    --card-gap: 10;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+img{
+  height: 140px;
+}
+
+body{
+    background-color: var(--primary-color-400);
+    /* background: linear-gradient(to bottom, var(--primary-color-300), var(--primary-color-900)); */
+    
+   
+    height: 100vh;
+    
+   
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+
+    font-family: var(--heading-font-family);
+    font-size: var(--heading-font-size);
+
+    grid-area: 1 / 2 / 3;
+    
+  
+}
+
+.rps-body{
+    display: grid;
+    margin-top: 70px;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    position: relative;
+
+}
+
+.card-body{
+  display: flex;
+  justify-content: space-between;
+  
+  margin-left: 100px;
+
+  width: 700px;
+
+  background-color: rgb(231, 216, 186);
+ 
+
+  grid-area: 2 / 2 / 4 / 3;
+
+  border-radius: 20px;
+
+  
+
+}
+
+.card-body > button {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: transform 0.2 ease;
+}
+
+.card-body >button.animate{
+  transform:  translateY(-5px);
+}
+
+
+.roundMessage {
+  display: flex;
+  grid-area: 4 / 2 / 5 / 3;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.roundChoices{
+  display: flex;
+  flex-direction: column;
+
+  grid-area: 5 / 2 / 6 / 3;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.roundScore{
+  display: flex;
+
+  grid-area: 6 / 2 / 7 / 3;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  
+}
+
+.compScore{
+  margin-right: 30px;
+}
+
+
+.finalMessage {
+  display: flex;
+
+  grid-area: 7 / 2 / 8 / 3;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.rounds{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+
+.replayModal{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+ 
+  padding: 20px;
+  background-color: var(--primary-color-300);
+
+  border-radius: 10px;
+
+  height: 200px;
+  width: 400px;
+
+  position: absolute;
+  top: 40%;
+  left: 40%;
+
+  
+  visibility: hidden;
+
+}
+
+.replayModal> button{
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 10px;
+
+  margin-top: 80px;
+
+  cursor: pointer;
+}

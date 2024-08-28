@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
+    <title>RPS GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    
+
 </head>
 <body>
+    <div class="rps-body">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <div class="card-body">
+            <button id="rock"><img src="/Icons/rock-svgrepo-com.svg" alt="rock image"></button>
+            <button id="paper"><img src="/Icons/newspaper-svgrepo-com.svg" alt="Paper image"></button>
+            <button id="scissors"><img src="/Icons/scissors-svgrepo-com.svg" alt="Scissors image"></button>
+        </div>
+        <span class="roundMessage"></span>
+        <div class="roundChoices">
+            <p>Computer: <span class="compChoice"></span> </p>
+            <p>Player: <span class="playChoice"></span> </p>
+        </div>
+        <div class="roundScore">
+            <p>COMPUTER SCORE : <span class="compScore"></span> </p>
+            <p>PLAYER SCORE: <span class="playerScore"></span> </p>
+        </div>
+        <span class="finalMessage"></span>
+
+        <div class="rounds">
+            <p>Rounds : </p>
+            <span class="roundNumbers"></span>
+        </div>
+        
+
+        <div class="replayModal">
+            <h2>Do you wnat to play again?</h2>
+            <button id="playAgainBtn">Play again</button>
+        </div>
+    </div>
     
 </body>
 </html>
